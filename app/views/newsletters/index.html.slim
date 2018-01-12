@@ -1,0 +1,11 @@
+.container
+  .row
+    .col-xs-12.col-md-3
+      = simple_form_for @newsletter do |f|
+        = f.input :name
+        = f.button :submit, 'Adicionar Newsletter', class: 'btn btn-primary'
+  .row
+    - @newsletters.each do |newlet|
+      p #{newlet.name}
+
+

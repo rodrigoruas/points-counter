@@ -1,0 +1,15 @@
+.container
+  .row
+    .col-xs-12.col-md-3
+      = simple_form_for @motel do |f|
+        = f.input :name
+        = f.button :submit, 'Adicionar Motel', class: 'btn btn-primary'
+
+
+  - @motels.each do |motel|
+    .row
+      .col-xs-12.col-md-6
+        p #{motel.name}
+      .col-xs-12.col-md-6
+        p #{motel.points}
+
